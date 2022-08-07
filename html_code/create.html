@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create Student</title>
+  </head>
+  <body>
+    <h2>Add student</h2>
+    {% if f %}
+    <p>There is form data</p>
+    <form  method="post">
+      <table>
+        {{f.as_table}}
+        {%csrf_token%}
+      </table>
+      <input type="submit" name="" value="save">
+
+
+    </form>
+    {%else%}
+    <p>There is no form data</p>
+    {%endif%}
+
+  </body>
+</html>
