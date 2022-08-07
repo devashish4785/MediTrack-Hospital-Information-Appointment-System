@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Patient Detail</title>
+  </head>
+  <body>
+    <h2>Patient Details</h2>
+    <table border="2" border-collapse='collapse'>
+        <thead>
+          <b><h4>Personal patient_form</h4></b>
+        </thead>
+
+      <tr>
+        <td><b>FirstName:</b> {{patient.firstname}}</td>
+        <td><b>LastName:</b> {{patient.lastname}}</td>
+      </tr>
+      <tr>
+      <td><b>Age:</b> {{patient.age}}</td>
+      <td><b>Gender:</b> {{patient.gender}}</td>
+    </tr>
+  </table>
+
+<b><h4>Contact Information</h4></b>
+
+
+
+<table>
+    <tr>
+    <td><b>Phone:</b> {{patient.phone}}</td>
+    <td><b>Email:</b> {{patient.enail}}</td>
+    <td><b>Address:</b> {{patient.address}}</td>
+    </tr>
+
+
+    </table>
+    <a href="/update/{{patient.id}}"><button type="submit" >Update</button></a>
+    <a href="/delete/{{patient.id}}"><button type="submit" >Delete</button></a>
+    <a href="/"><button type="button" name="button">Home</button></a>
+
+<!--clinic data-->
+<h2>Clinical data of patient</h2>
+    {%if clinic_data is not None%}
+    <table border="2" border-collapse=collapse>
+      <thead>
+        <th>height</th>
+        <th>weight</th>
+        <th>Blood Pressure</th>
+        <th>Heart Rate</th>
+        <th>BMI Index</th>
+      </thead>
+      <tr>
+        <td>{{clinic_data.height}}</td>
+        <td>{{clinic_data.weight}}</td>
+        <td>{{clinic_data.bp}}</td>
+        <td>{{clinic_data.heartrate}}</td>
+        <td>{{bmi}}</td>
+
+      </tr>
+
+    </table>
+    {%else%}
+    <h4>  <i>No clinical data is avalible,Please click below to add new data.</i></h4>
+    <a href="/addclinic/{{patient.id}}"><button type="button" name="button">Add Clinic data</button></a>
+  </body>
+  {%endif%}
+</html>
