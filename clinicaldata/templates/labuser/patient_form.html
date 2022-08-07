@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Add Patient</title>
+  </head>
+  <body>
+  <b>please enter the patient details:</b>
+  <form method="post">
+    {%csrf_token%}
+    <table margin=20 px>
+      {{form.as_table}}
+    </table >
+    <input type="submit" value='save' >
+
+  </form>
+  </body>
+</html>

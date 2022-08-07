@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Delete confirmation</title>
+  </head>
+  <body>
+    <h3>Please confirm to delete record of {{patient.firstname}} {{patient.lastname}} ?</h3>
+    <form  method="post">
+      <input type="submit"  value="Delete">
+      <a href="/" margin='30'><button type="button" name="button">Cancel</button></a>
+      {%csrf_token%}
+
+    </form>
+
+  </body>
+</html>

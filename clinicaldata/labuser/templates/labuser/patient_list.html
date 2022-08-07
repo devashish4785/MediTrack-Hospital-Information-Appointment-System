@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>patient List</title>
+    <link rel="stylesheet" href="{% static "/css/index.css"%}">
+  </head>
+  <body>
+
+    {%csrf_token%}
+    {%if patient_list%}
+    <h1>Patient List</h1>
+    <table Class='patients'>
+      <thead background-colour=blue>
+        <th>ID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Age</th>
+        <th>Gender</th>
+
+      </thead>
+      {%for p in patient_list%}
+      <tr>
+        <td>{{p.id}}</td>
+        <td>{{p.firstname}}</td>
+        <td>{{p.lastname}}</td>
+        <td>{{p.age}}</td>
+        <td>{{p.gender}}</td>
+        <td id='pat'><a href="/detail/{{p.id}}" ><button type="button" name="button">View Patient</button></a></td>
+
+
+
+      </tr>
+      {%endfor%}
+    </table>
+    {%else%}
+    <h3>Currently the patient list is empty.</h3>
+    <h4>For adding patient click below:</h4>
+    {%endif%}
+    <a href="/create"><button type='button' name='button' id='addbutton'>Add Patient</button></a>
+
+  </body>
+</html>

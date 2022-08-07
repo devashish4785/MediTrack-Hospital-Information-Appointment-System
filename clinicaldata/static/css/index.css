@@ -1,0 +1,63 @@
+h1{
+  color: white;
+  font-family: inherit;
+  text-align: center;
+  background-color: #04AA6D;
+}
+
+.patients{
+  border-collapse: collapse;
+  align-self: stretch;
+  width:100%;
+  text-align: left;
+  margin-left: 100px;
+}
+.patients th,.patients td{
+  border: 1px solid #bbb;
+  padding: 8px;
+}
+.patients tr:nth-child(even){background-color: #ddd;}
+.patients tr:hover{background-color: lightblue;}
+
+.patients thead{background-color:  #04AA6D; color: white;}
+#pat{
+  border: None;
+  background-color: white;
+
+}
+#pat:hover{background-color: lightblue;}
+
+#addbutton{
+  align-content: center;
+  background-color: green;
+  border-radius: 8px;
+  margin-left: 45%;
+  margin-top: 40px;
+  display: block;
+  color: white;
+   padding: 20px;
+   border:None;
+   font-size: 17px;
+   font-style: normal;
+}
+#addbutton:hover{
+  background-color: red;
+  color:lightblue;
+}
+
+button{
+  background-color: green;
+
+  border-radius: 5px;
+  color: white;
+  border: None;
+  padding: 5px;
+
+
+}
+button:hover{
+  border: None;
+  background-color: yellow;
+  color: green;
+
+}
