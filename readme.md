@@ -1,5 +1,3 @@
-Here’s a **professional and comprehensive `README.md`** for your **MediTrack – Cloud-Based Health Data Platform (AWS)** project. It highlights your architecture, tech stack, how to run, and even includes visuals and future plans (which you can modify as needed).
-
 ---
 
 ```markdown
